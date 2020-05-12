@@ -82,16 +82,72 @@
 		F85C1B6A246AA0AE00AC0D25 /* DemoFirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
-				F85C1B7F246AA4AB00AC0D25 /* GoogleService-Info.plist */,
 				F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */,
 				F85C1B6D246AA0AE00AC0D25 /* SceneDelegate.swift */,
-				F85C1B6F246AA0AE00AC0D25 /* ViewController.swift */,
-				F85C1B71246AA0AE00AC0D25 /* Main.storyboard */,
-				F85C1B74246AA0B300AC0D25 /* Assets.xcassets */,
-				F85C1B76246AA0B300AC0D25 /* LaunchScreen.storyboard */,
-				F85C1B79246AA0B300AC0D25 /* Info.plist */,
+				F85C1B86246AB1CE00AC0D25 /* Resorces */,
+				F85C1B85246AB1BD00AC0D25 /* Core */,
+				F85C1B83246AB16700AC0D25 /* ResetPassword */,
+				F85C1B82246AB15000AC0D25 /* Register */,
+				F85C1B81246AB13400AC0D25 /* Login */,
+				F85C1B84246AB18600AC0D25 /* View */,
+				F85C1B87246AB1FC00AC0D25 /* WelcomeVC */,
 			);
 			path = DemoFirebaseAuth;
+			sourceTree = "<group>";
+		};
+		F85C1B81246AB13400AC0D25 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F85C1B82246AB15000AC0D25 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F85C1B83246AB16700AC0D25 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		F85C1B84246AB18600AC0D25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F85C1B71246AA0AE00AC0D25 /* Main.storyboard */,
+				F85C1B76246AA0B300AC0D25 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F85C1B85246AB1BD00AC0D25 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F85C1B79246AA0B300AC0D25 /* Info.plist */,
+				F85C1B7F246AA4AB00AC0D25 /* GoogleService-Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F85C1B86246AB1CE00AC0D25 /* Resorces */ = {
+			isa = PBXGroup;
+			children = (
+				F85C1B74246AA0B300AC0D25 /* Assets.xcassets */,
+			);
+			path = Resorces;
+			sourceTree = "<group>";
+		};
+		F85C1B87246AB1FC00AC0D25 /* WelcomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				F85C1B6F246AA0AE00AC0D25 /* ViewController.swift */,
+			);
+			path = WelcomeVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
