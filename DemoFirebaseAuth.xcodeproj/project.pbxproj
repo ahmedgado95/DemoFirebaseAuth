@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED414B8447CB6133F7643FB5 /* Pods_DemoFirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C3409929EDAB8B1D393BD2 /* Pods_DemoFirebaseAuth.framework */; };
+		F84730E4246BFD4600AFD2F3 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84730E3246BFD4600AFD2F3 /* RegisterVC.swift */; };
 		F85C1B6C246AA0AE00AC0D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */; };
 		F85C1B6E246AA0AE00AC0D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B6D246AA0AE00AC0D25 /* SceneDelegate.swift */; };
 		F85C1B70246AA0AE00AC0D25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B6F246AA0AE00AC0D25 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		6CAFB561F59F291280C515FF /* Pods-DemoFirebaseAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoFirebaseAuth.release.xcconfig"; path = "Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth.release.xcconfig"; sourceTree = "<group>"; };
 		6D22E36A3FB6FEC3849B89F2 /* Pods-DemoFirebaseAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoFirebaseAuth.debug.xcconfig"; path = "Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth.debug.xcconfig"; sourceTree = "<group>"; };
 		72C3409929EDAB8B1D393BD2 /* Pods_DemoFirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoFirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84730E3246BFD4600AFD2F3 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		F85C1B68246AA0AE00AC0D25 /* DemoFirebaseAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoFirebaseAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F85C1B6D246AA0AE00AC0D25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		F85C1B82246AB15000AC0D25 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				F84730E3246BFD4600AFD2F3 /* RegisterVC.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				F85C1B6C246AA0AE00AC0D25 /* AppDelegate.swift in Sources */,
 				F85C1B89246AB30000AC0D25 /* LoginVC.swift in Sources */,
 				F85C1B6E246AA0AE00AC0D25 /* SceneDelegate.swift in Sources */,
+				F84730E4246BFD4600AFD2F3 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

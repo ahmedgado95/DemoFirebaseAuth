@@ -10,7 +10,6 @@ import UIKit
 
 class LoginVC: UIViewController {
     // MARK: - IBOutlet
-    
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var codeButton: UIButton!
@@ -34,18 +33,13 @@ class LoginVC: UIViewController {
     }
     // MARK: - setUpView
     func setUpView(){
-        setUpImage()
         setUpCornerRadious()
         setUpPadding()
         setUpPlaceHolder(text: " Enter Email")
         setupSegmentedControl()
         setUpborderColor()
         setUpborderWidth()
-        
-    }
-    // MARK: - setUpImage
-    func setUpImage(){
-        
+        hideKeyboardWhenTappedAround()
     }
     // MARK: - setUpborderColor
     func setUpborderColor(){
@@ -65,7 +59,6 @@ class LoginVC: UIViewController {
         faceBookLoginButton.layer.cornerRadius = faceBookLoginButton.frame.height / 2
         googleLoginButton.layer.cornerRadius = googleLoginButton.frame.height / 2
         appleLoginButton.layer.cornerRadius = appleLoginButton.frame.height / 2
-
     }
     // MARK: - setUpPadding
     func setUpPadding(){
@@ -87,8 +80,6 @@ class LoginVC: UIViewController {
         let titleTextAttributesNormal = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segment.setTitleTextAttributes(titleTextAttributesNormal, for: .normal)
     }
-    
-    
     // MARK: - IBAction
     @IBAction func segmentActionPressed(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -105,9 +96,13 @@ class LoginVC: UIViewController {
         self.emailPhoneTxt.resignFirstResponder()
         self.typeOfUserInput = TypeOfUserInput(rawValue: sender.selectedSegmentIndex) ?? .email
     }
+    
+    @IBAction func createAccountButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "RegisterVC") as! RegisterVC
+        self.present(vc, animated: true, completion: nil)
+    }
     @IBAction func loginButtonPressed(_ sender: Any) {
     }
-    
     @IBAction func faceBookLoginButtonPressed(_ sender: Any) {
     }
     @IBAction func googleLoginButtonPressed(_ sender: Any) {
