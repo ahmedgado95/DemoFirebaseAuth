@@ -53,7 +53,6 @@ extension UIViewController {
                          action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
-
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
