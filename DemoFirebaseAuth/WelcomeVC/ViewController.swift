@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var typeofAuth = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.\
+        print(typeofAuth)
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(gotoLogin))
         view.addGestureRecognizer(tapGesture)

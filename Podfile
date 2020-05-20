@@ -11,5 +11,10 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+# Pods for FirebaseFacebook
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  
+  
 
 end

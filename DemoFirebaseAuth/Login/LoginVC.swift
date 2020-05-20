@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+import Firebase
+import FacebookCore
+import FacebookLogin
+import FirebaseAuth
 class LoginVC: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var passwordTxt: UITextField!
@@ -71,7 +74,6 @@ class LoginVC: UIViewController {
     func setUpPlaceHolder(text : String){
         emailPhoneTxt.attributedPlaceholder = NSAttributedString(string: text,attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         passwordTxt.attributedPlaceholder = NSAttributedString(string: "Enter Password",attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        
     }
     // MARK: - setupSegmentedControl
     func setupSegmentedControl(){
@@ -79,6 +81,47 @@ class LoginVC: UIViewController {
         segment.setTitleTextAttributes(titleTextAttributesSelected, for: .selected)
         let titleTextAttributesNormal = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segment.setTitleTextAttributes(titleTextAttributesNormal, for: .normal)
+    }
+    // MARK: - validateLogin
+    func validateLogin(){
+        guard let email = emailPhoneTxt.text , let password = passwordTxt.text else {return}
+        if(email.isEmpty == true || password.isEmpty == true){
+            print("Please fill empty fields")
+        } else {
+            getLogin(email: email, password: password)
+        }
+    }
+    // MARK: - getLogin with email
+    func getLogin( email : String , password : String){
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if(error == nil){
+                let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+                vc.modalPresentationStyle = .fullScreen
+                vc.typeofAuth = "\( self.typeOfUserInput )"
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                print("Wrong username or password")
+            }
+        }
+    }
+    // MARK: - firebaseFaceBookLogin
+    func firebaseFaceBookLogin(accessToken: String) {
+        let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+    
+        Auth.auth().signInAndRetrieveData(with: credential, completion: {(authResult, error) in
+            if let error = error {
+                print("Firebase Login Error")
+                print(error)
+                return
+            }
+            // User has signed
+            print("Firebase Login Done")
+            print(authResult ?? "")
+            if let user = Auth.auth().currentUser {
+                print("Current firebase user is")
+                print(user)
+            }
+        })
     }
     // MARK: - IBAction
     @IBAction func segmentActionPressed(_ sender: UISegmentedControl) {
@@ -96,12 +139,24 @@ class LoginVC: UIViewController {
         self.emailPhoneTxt.resignFirstResponder()
         self.typeOfUserInput = TypeOfUserInput(rawValue: sender.selectedSegmentIndex) ?? .email
     }
-    
     @IBAction func createAccountButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "RegisterVC") as! RegisterVC
         self.present(vc, animated: true, completion: nil)
     }
     @IBAction func loginButtonPressed(_ sender: Any) {
+//        if typeOfUserInput == .email {
+            validateLogin()
+            
+//        }else{
+//            Auth.auth().settings?.isAppVerificationDisabledForTesting = false
+//            PhoneAuthProvider.provider().verifyPhoneNumber(emailPhoneTxt.text ?? "", uiDelegate: nil, completion: { vervecation , error in
+//                if error != nil {
+//                    return
+//                }else {
+//                    self.code = vervecation ?? ""
+//                }
+//            })
+//        }
     }
     @IBAction func faceBookLoginButtonPressed(_ sender: Any) {
     }
