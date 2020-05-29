@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import FacebookCore
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -20,6 +22,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         FirebaseApp.configure()
     }
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+      if let openURLContext = URLContexts.first {
+        ApplicationDelegate.shared.application(UIApplication.shared, open:
+        openURLContext.url, sourceApplication:
+        openURLContext.options.sourceApplication, annotation:
+        openURLContext.options.annotation)
+      }
+    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

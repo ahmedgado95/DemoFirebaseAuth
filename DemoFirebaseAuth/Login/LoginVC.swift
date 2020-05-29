@@ -104,25 +104,6 @@ class LoginVC: UIViewController {
             }
         }
     }
-    // MARK: - firebaseFaceBookLogin
-    func firebaseFaceBookLogin(accessToken: String) {
-        let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
-    
-        Auth.auth().signInAndRetrieveData(with: credential, completion: {(authResult, error) in
-            if let error = error {
-                print("Firebase Login Error")
-                print(error)
-                return
-            }
-            // User has signed
-            print("Firebase Login Done")
-            print(authResult ?? "")
-            if let user = Auth.auth().currentUser {
-                print("Current firebase user is")
-                print(user)
-            }
-        })
-    }
     // MARK: - IBAction
     @IBAction func segmentActionPressed(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -144,21 +125,22 @@ class LoginVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     @IBAction func loginButtonPressed(_ sender: Any) {
-//        if typeOfUserInput == .email {
-            validateLogin()
-            
-//        }else{
-//            Auth.auth().settings?.isAppVerificationDisabledForTesting = false
-//            PhoneAuthProvider.provider().verifyPhoneNumber(emailPhoneTxt.text ?? "", uiDelegate: nil, completion: { vervecation , error in
-//                if error != nil {
-//                    return
-//                }else {
-//                    self.code = vervecation ?? ""
-//                }
-//            })
-//        }
+        validateLogin()
     }
     @IBAction func faceBookLoginButtonPressed(_ sender: Any) {
+        let loginManger = LoginManager()
+        loginManger.logIn(permissions: [.publicProfile , .email], viewController: self) { (result) in
+            switch result{
+            case .success(let granted, let declined, let token):
+                print("Success Login in with FaceBook")
+                self.firebaseFaceBookLogin(token: token)
+            case .cancelled:
+                print("cancelled")
+            case .failed(let error):
+                print(error.localizedDescription)
+                
+            }
+        }
     }
     @IBAction func googleLoginButtonPressed(_ sender: Any) {
     }
@@ -166,5 +148,20 @@ class LoginVC: UIViewController {
     @IBAction func appleLoginButtonPressed(_ sender: Any) {
     }
 }
-
-
+extension LoginVC  {
+    // MARK: - firebaseFaceBookLogin
+    fileprivate func firebaseFaceBookLogin(token :AccessToken ){
+        let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                print(error)
+            }
+            print("Success Login in with FireBase")
+            print(user ?? "")
+            if let userlogin = Auth.auth().currentUser {
+                print("Current firebase user is")
+                print(userlogin)
+            }
+        }
+    }
+}
