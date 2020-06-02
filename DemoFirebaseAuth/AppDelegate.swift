@@ -5,16 +5,14 @@
 //  Created by ahmed gado on 5/12/20.
 //  Copyright © 2020 ahmed gado. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 
@@ -34,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 
 extension UITextField {
     func setLeftPaddingPoints(_ amount:CGFloat){

@@ -14,7 +14,7 @@ pod 'Firebase/Storage'
 # Pods for FirebaseFacebook
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  
-  
+# Pods for FirebaseGoogle
+  pod 'GoogleSignIn'
 
 end

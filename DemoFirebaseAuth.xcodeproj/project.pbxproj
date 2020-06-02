@@ -15,8 +15,8 @@
 		F85C1B73246AA0AE00AC0D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B71246AA0AE00AC0D25 /* Main.storyboard */; };
 		F85C1B75246AA0B300AC0D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B74246AA0B300AC0D25 /* Assets.xcassets */; };
 		F85C1B78246AA0B300AC0D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B76246AA0B300AC0D25 /* LaunchScreen.storyboard */; };
-		F85C1B80246AA4AB00AC0D25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B7F246AA4AB00AC0D25 /* GoogleService-Info.plist */; };
 		F85C1B89246AB30000AC0D25 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B88246AB30000AC0D25 /* LoginVC.swift */; };
+		F869109624870A7A008D4540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F869109524870A7A008D4540 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		F85C1B74246AA0B300AC0D25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F85C1B77246AA0B300AC0D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F85C1B79246AA0B300AC0D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F85C1B7F246AA4AB00AC0D25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F85C1B88246AB30000AC0D25 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F869109524870A7A008D4540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F85C1B79246AA0B300AC0D25 /* Info.plist */,
-				F85C1B7F246AA4AB00AC0D25 /* GoogleService-Info.plist */,
+				F869109524870A7A008D4540 /* GoogleService-Info.plist */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -168,6 +168,7 @@
 				F85C1B65246AA0AE00AC0D25 /* Frameworks */,
 				F85C1B66246AA0AE00AC0D25 /* Resources */,
 				70BA0DE6D9061AF8E6965096 /* [CP] Embed Pods Frameworks */,
+				BC418E38D7E944668F1EB8C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,7 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85C1B78246AA0B300AC0D25 /* LaunchScreen.storyboard in Resources */,
-				F85C1B80246AA4AB00AC0D25 /* GoogleService-Info.plist in Resources */,
+				F869109624870A7A008D4540 /* GoogleService-Info.plist in Resources */,
 				F85C1B75246AA0B300AC0D25 /* Assets.xcassets in Resources */,
 				F85C1B73246AA0AE00AC0D25 /* Main.storyboard in Resources */,
 			);
@@ -241,6 +242,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC418E38D7E944668F1EB8C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9BFFCADBE06FEDE6350212F /* [CP] Check Pods Manifest.lock */ = {
