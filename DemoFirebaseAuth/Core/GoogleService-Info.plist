@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>333349479895-kg696ltr74vhd35htjgqo6ddl0ebt4bh.apps.googleusercontent.com</string>
+	<string>441090049756-lq3msi9je56i90g8v40u1nfgg00bq41q.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.333349479895-kg696ltr74vhd35htjgqo6ddl0ebt4bh</string>
+	<string>com.googleusercontent.apps.441090049756-lq3msi9je56i90g8v40u1nfgg00bq41q</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBAa2cm8DVj7LFbSioNq_wRgWira1W5upE</string>
+	<string>AIzaSyACPoNSR6EGPFSdhav8qiiQWl30XF051yc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>333349479895</string>
+	<string>441090049756</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>DemoFirebaseAuth</string>
+	<string>com.DemoFirebaseAuth</string>
 	<key>PROJECT_ID</key>
-	<string>demoauth-48b12</string>
+	<string>testfacebooklogin-61184</string>
 	<key>STORAGE_BUCKET</key>
-	<string>demoauth-48b12.appspot.com</string>
+	<string>testfacebooklogin-61184.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:333349479895:ios:3459d3440770e6ae205792</string>
+	<string>1:441090049756:ios:3658d678fcb92c68999619</string>
 	<key>DATABASE_URL</key>
-	<string>https://demoauth-48b12.firebaseio.com</string>
+	<string>https://testfacebooklogin-61184.firebaseio.com</string>
 </dict>
 </plist>

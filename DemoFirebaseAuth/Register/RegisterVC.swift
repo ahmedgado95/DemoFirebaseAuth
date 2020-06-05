@@ -104,7 +104,6 @@ class RegisterVC: UIViewController {
             if error == nil {
                 // success
                 guard let userId = success?.user.uid else {return}
-                
                 // upload image to storage
                 let imageName = NSUUID().uuidString
                 let storageRef = Storage.storage().reference().child("ProfileImage").child("\(imageName).png")
@@ -139,9 +138,9 @@ class RegisterVC: UIViewController {
         
     }
     func goWelcome(){
-        let vc = storyboard?.instantiateViewController(identifier: "ViewController")  as! ViewController
+        let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
     }
     // MARK: - IBAction
     @IBAction func haveAccountButtonPressed(_ sender: Any) {
@@ -165,8 +164,6 @@ extension RegisterVC : UIImagePickerControllerDelegate , UINavigationControllerD
         }
         profileImage.image = selectedImage
         dismiss(animated: true, completion: nil)
-        
-        
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("Cancel Picker")

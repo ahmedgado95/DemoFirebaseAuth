@@ -16,7 +16,8 @@
 		F85C1B75246AA0B300AC0D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B74246AA0B300AC0D25 /* Assets.xcassets */; };
 		F85C1B78246AA0B300AC0D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B76246AA0B300AC0D25 /* LaunchScreen.storyboard */; };
 		F85C1B89246AB30000AC0D25 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B88246AB30000AC0D25 /* LoginVC.swift */; };
-		F869109624870A7A008D4540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F869109524870A7A008D4540 /* GoogleService-Info.plist */; };
+		F863A487248994900087CDC7 /* AppleSiginIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F863A486248994900087CDC7 /* AppleSiginIn.swift */; };
+		F8747884248AEED8004BABBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8747883248AEED8004BABBC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,9 @@
 		F85C1B77246AA0B300AC0D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F85C1B79246AA0B300AC0D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F85C1B88246AB30000AC0D25 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		F869109524870A7A008D4540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F863A486248994900087CDC7 /* AppleSiginIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSiginIn.swift; sourceTree = "<group>"; };
+		F863A48D2489B0460087CDC7 /* DemoFirebaseAuth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = DemoFirebaseAuth.entitlements; sourceTree = "<group>"; };
+		F8747883248AEED8004BABBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +91,14 @@
 			children = (
 				F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */,
 				F85C1B6D246AA0AE00AC0D25 /* SceneDelegate.swift */,
+				F863A48D2489B0460087CDC7 /* DemoFirebaseAuth.entitlements */,
 				F85C1B86246AB1CE00AC0D25 /* Resorces */,
 				F85C1B85246AB1BD00AC0D25 /* Core */,
 				F85C1B83246AB16700AC0D25 /* ResetPassword */,
 				F85C1B82246AB15000AC0D25 /* Register */,
 				F85C1B81246AB13400AC0D25 /* Login */,
-				F85C1B84246AB18600AC0D25 /* View */,
 				F85C1B87246AB1FC00AC0D25 /* WelcomeVC */,
+				F85C1B84246AB18600AC0D25 /* View */,
 			);
 			path = DemoFirebaseAuth;
 			sourceTree = "<group>";
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				F85C1B88246AB30000AC0D25 /* LoginVC.swift */,
+				F863A486248994900087CDC7 /* AppleSiginIn.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -135,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F85C1B79246AA0B300AC0D25 /* Info.plist */,
-				F869109524870A7A008D4540 /* GoogleService-Info.plist */,
+				F8747883248AEED8004BABBC /* GoogleService-Info.plist */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -218,8 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85C1B78246AA0B300AC0D25 /* LaunchScreen.storyboard in Resources */,
-				F869109624870A7A008D4540 /* GoogleService-Info.plist in Resources */,
 				F85C1B75246AA0B300AC0D25 /* Assets.xcassets in Resources */,
+				F8747884248AEED8004BABBC /* GoogleService-Info.plist in Resources */,
 				F85C1B73246AA0AE00AC0D25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +299,7 @@
 				F85C1B6C246AA0AE00AC0D25 /* AppDelegate.swift in Sources */,
 				F85C1B89246AB30000AC0D25 /* LoginVC.swift in Sources */,
 				F85C1B6E246AA0AE00AC0D25 /* SceneDelegate.swift in Sources */,
+				F863A487248994900087CDC7 /* AppleSiginIn.swift in Sources */,
 				F84730E4246BFD4600AFD2F3 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +445,7 @@
 			baseConfigurationReference = 6D22E36A3FB6FEC3849B89F2 /* Pods-DemoFirebaseAuth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DemoFirebaseAuth/DemoFirebaseAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKEZ3U687Q;
 				INFOPLIST_FILE = "$(SRCROOT)/DemoFirebaseAuth/Core/Info.plist";
@@ -458,6 +465,7 @@
 			baseConfigurationReference = 6CAFB561F59F291280C515FF /* Pods-DemoFirebaseAuth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DemoFirebaseAuth/DemoFirebaseAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKEZ3U687Q;
 				INFOPLIST_FILE = "$(SRCROOT)/DemoFirebaseAuth/Core/Info.plist";
