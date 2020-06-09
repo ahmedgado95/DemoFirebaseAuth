@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     var typeofAuth = ""
@@ -20,6 +21,13 @@ class ViewController: UIViewController {
         
     }
     @objc func gotoLogin() {
+            let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+          
         let vc = storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginVC
         self.present(vc, animated: true, completion: nil)
     }

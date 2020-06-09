@@ -161,7 +161,6 @@ class LoginVC: UIViewController {
             // receive data in login class.
             let credentials = OAuthProvider.credential(withProviderID: "apple.com", idToken: token ?? "", rawNonce: "")
             self.firebaseLogin(credential: credentials)
-            
         })
     }
 }
