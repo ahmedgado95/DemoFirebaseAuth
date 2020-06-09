@@ -16,5 +16,7 @@ pod 'Firebase/Storage'
   pod 'FacebookLogin'
 # Pods for FirebaseGoogle
   pod 'GoogleSignIn'
+# Pods for ADCountryPicker
+  pod 'ADCountryPicker'
 
 end

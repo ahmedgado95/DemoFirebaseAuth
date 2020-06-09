@@ -73,6 +73,9 @@
                                         <state key="normal" title="+966">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openCountriesPicker:" destination="xAk-xb-Hfg" eventType="touchUpInside" id="3Kj-lG-pRh"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-es-GLv">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="40"/>
