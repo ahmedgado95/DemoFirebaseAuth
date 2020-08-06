@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED414B8447CB6133F7643FB5 /* Pods_DemoFirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C3409929EDAB8B1D393BD2 /* Pods_DemoFirebaseAuth.framework */; };
+		F808B61C24DC00E7006A321E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808B61B24DC00E7006A321E /* Photo.swift */; };
 		F84730E4246BFD4600AFD2F3 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84730E3246BFD4600AFD2F3 /* RegisterVC.swift */; };
 		F85C1B6C246AA0AE00AC0D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */; };
 		F85C1B6E246AA0AE00AC0D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B6D246AA0AE00AC0D25 /* SceneDelegate.swift */; };
@@ -16,7 +17,7 @@
 		F85C1B75246AA0B300AC0D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B74246AA0B300AC0D25 /* Assets.xcassets */; };
 		F85C1B78246AA0B300AC0D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85C1B76246AA0B300AC0D25 /* LaunchScreen.storyboard */; };
 		F85C1B89246AB30000AC0D25 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C1B88246AB30000AC0D25 /* LoginVC.swift */; };
-		F863A487248994900087CDC7 /* AppleSiginIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F863A486248994900087CDC7 /* AppleSiginIn.swift */; };
+		F863A487248994900087CDC7 /* AppleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F863A486248994900087CDC7 /* AppleSignIn.swift */; };
 		F8747884248AEED8004BABBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8747883248AEED8004BABBC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		6CAFB561F59F291280C515FF /* Pods-DemoFirebaseAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoFirebaseAuth.release.xcconfig"; path = "Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth.release.xcconfig"; sourceTree = "<group>"; };
 		6D22E36A3FB6FEC3849B89F2 /* Pods-DemoFirebaseAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoFirebaseAuth.debug.xcconfig"; path = "Target Support Files/Pods-DemoFirebaseAuth/Pods-DemoFirebaseAuth.debug.xcconfig"; sourceTree = "<group>"; };
 		72C3409929EDAB8B1D393BD2 /* Pods_DemoFirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoFirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F808B61B24DC00E7006A321E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F84730E3246BFD4600AFD2F3 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		F85C1B68246AA0AE00AC0D25 /* DemoFirebaseAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoFirebaseAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +36,7 @@
 		F85C1B77246AA0B300AC0D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F85C1B79246AA0B300AC0D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F85C1B88246AB30000AC0D25 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		F863A486248994900087CDC7 /* AppleSiginIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSiginIn.swift; sourceTree = "<group>"; };
+		F863A486248994900087CDC7 /* AppleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignIn.swift; sourceTree = "<group>"; };
 		F863A48D2489B0460087CDC7 /* DemoFirebaseAuth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = DemoFirebaseAuth.entitlements; sourceTree = "<group>"; };
 		F8747883248AEED8004BABBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F808B61A24DC00A3006A321E /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				F808B61B24DC00E7006A321E /* Photo.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
 		F85C1B5F246AA0AE00AC0D25 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 				F85C1B6B246AA0AE00AC0D25 /* AppDelegate.swift */,
 				F85C1B6D246AA0AE00AC0D25 /* SceneDelegate.swift */,
 				F863A48D2489B0460087CDC7 /* DemoFirebaseAuth.entitlements */,
+				F808B61A24DC00A3006A321E /* Extenstion */,
 				F85C1B86246AB1CE00AC0D25 /* Resorces */,
 				F85C1B85246AB1BD00AC0D25 /* Core */,
 				F85C1B83246AB16700AC0D25 /* ResetPassword */,
@@ -107,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				F85C1B88246AB30000AC0D25 /* LoginVC.swift */,
-				F863A486248994900087CDC7 /* AppleSiginIn.swift */,
+				F863A486248994900087CDC7 /* AppleSignIn.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -295,11 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F808B61C24DC00E7006A321E /* Photo.swift in Sources */,
 				F85C1B70246AA0AE00AC0D25 /* ViewController.swift in Sources */,
 				F85C1B6C246AA0AE00AC0D25 /* AppDelegate.swift in Sources */,
 				F85C1B89246AB30000AC0D25 /* LoginVC.swift in Sources */,
 				F85C1B6E246AA0AE00AC0D25 /* SceneDelegate.swift in Sources */,
-				F863A487248994900087CDC7 /* AppleSiginIn.swift in Sources */,
+				F863A487248994900087CDC7 /* AppleSignIn.swift in Sources */,
 				F84730E4246BFD4600AFD2F3 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

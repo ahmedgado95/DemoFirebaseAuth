@@ -36,10 +36,31 @@ class RegisterVC: UIViewController {
     // MARK: - handel Image Action
     @objc func handelAction (){
         print("Open Picker Image")
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        present(picker, animated: true, completion: nil)
+        //        let picker = UIImagePickerController()
+        //        picker.delegate = self
+        //        picker.allowsEditing = true
+        //        present(picker, animated: true, completion: nil)
+        
+        let camera = PhotoOpen(delegate_: self)
+        
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let takePhotoOrVideo = UIAlertAction(title: "Camera", style: .default) { (action) in
+            camera.PresentPhotoCamera(target: self, canEdit: false)
+        }
+        
+        let sharePhoto = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+            
+            camera.PresentPhotoLibrary(target: self, canEdit: false)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        }
+        
+        optionMenu.addAction(takePhotoOrVideo)
+        optionMenu.addAction(sharePhoto)
+        optionMenu.addAction(cancelAction)
+        self.present(optionMenu, animated: true, completion: nil)
+        
     }
     // MARK: - setUpborderColor
     func setUpborderColor(){

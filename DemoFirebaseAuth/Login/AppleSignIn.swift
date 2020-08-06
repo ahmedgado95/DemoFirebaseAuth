@@ -1,5 +1,5 @@
 //
-//  AppleSiginIn.swift
+//  AppleSignIn.swift
 //  DemoFirebaseAuth
 //
 //  Created by ahmed gado on 6/4/20.
