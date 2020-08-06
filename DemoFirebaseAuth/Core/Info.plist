@@ -106,6 +106,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>can take photos to Register</string>
+	<string>can take photos to Register account</string>
 </dict>
 </plist>
