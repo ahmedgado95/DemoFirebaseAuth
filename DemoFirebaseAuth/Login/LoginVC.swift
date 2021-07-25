@@ -7,8 +7,8 @@
 //
 import UIKit
 import Firebase
-import FacebookCore
-import FacebookLogin
+import FBSDKCoreKit
+import FBSDKLoginKit
 import FirebaseAuth
 import GoogleSignIn
 import ADCountryPicker
@@ -141,7 +141,8 @@ class LoginVC: UIViewController {
             switch result{
             case .success( _, _, let token):
                 print("Success Login in with FaceBook")
-                self.firebaseFaceBookLogin(token: token)
+                
+                self.firebaseFaceBookLogin(token: token!)
             case .cancelled:
                 print("cancelled")
             case .failed(let error):
@@ -250,6 +251,7 @@ extension LoginVC  {
 // MARK: -  GIDSignInDelegate
 extension LoginVC :GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        guard  let user = user  else {return}
         print(user.profile.email ?? "")
         let credentials = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
         firebaseLogin(credential: credentials)

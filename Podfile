@@ -12,8 +12,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 # Pods for FirebaseFacebook
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
+pod 'FBSDKLoginKit'
 # Pods for FirebaseGoogle
   pod 'GoogleSignIn'
 # Pods for ADCountryPicker

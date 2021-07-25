@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FBSDKCoreKit
-import FacebookCore
 import GoogleSignIn
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
